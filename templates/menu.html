@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to BlinkLingo</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero">
+            <h1 class="fade-in">Welcome to BlinkLingo</h1>
+            <p class="fade-in">Your gateway to mastering Morse code and enhancing your communication skills.</p>
+            <button onclick="window.location.href='/home'" class="menu-button fade-in">Go to Home</button>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="section slide-up">
+            <h2>About BlinkLingo</h2>
+            <img src="/static/images/blinkMorseP.jpg" alt="About BlinkLingo" class="full-width-image">
+            <p>
+                BlinkLingo is a cutting-edge platform designed to teach Morse code in an interactive and engaging way.
+                Whether you're a beginner or looking to improve your skills, BlinkLingo has something for everyone.
+            </p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section slide-up">
+            <h2>Features</h2>
+            <img src="/static/images/school.jpg" alt="BlinkLingo Features" class="full-width-image">
+            <ul>
+                <p>- Interactive Morse Code Challenges</p>
+                <p>- Real-Time Feedback on Your Progress</p>
+                <p>- Multiple Levels to Suit Your Skillset</p>
+                <p>- Engaging and Intuitive Design</p>
+            </ul>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="section slide-up">
+            <h2>How It Works</h2>
+            <img src="/static/images/istockphoto-1368125099-612x612.jpg" alt="How It Works" class="full-width-image">
+            <p>
+                BlinkLingo leverages interactive tools and challenges to help you learn Morse code in an efficient and fun way.
+                Follow these steps:
+            </p>
+            <ol>
+                <p>- Select your level on the home page.</p>
+                <p>- Complete challenges to unlock new levels.</p>
+                <p>- Track your progress and improve over time.</p>
+            </ol>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section slide-up">
+            <h2>Contact Us</h2>
+            <img src="/static/images/vector-contact-us-retro-cartoon-concept.jpg" alt="Contact Us" class="full-width-image">
+            <p>
+                Have questions or feedback? We'd love to hear from you! Reach out to us at:
+                <a href="mailto:ks.anipindi@gmail.comx">support@blinklingo.com</a>
+            </p>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 BlinkLingo. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        // Intersection Observer for continuous animations
+        const sections = document.querySelectorAll('.section');
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible'); // Add visible class to animate
+                } else {
+                    entry.target.classList.remove('visible'); // Remove visible class to reset animation
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger animation when 10% of the section is visible
+    
+        // Observe all sections
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
+       
+</body>
+</html>

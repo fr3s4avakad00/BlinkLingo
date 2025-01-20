@@ -1,0 +1,51 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morse Code Game - Level {{ level }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script defer src="/static/js/script.js"></script>
+    <script>
+        console.log("[DEBUG] Loaded index.html for Level {{ level }}.");
+    </script>
+</head>
+<body>
+    <h1>Morse Code Game - Level {{ level }}</h1>
+    <p id="morse-display">Morse Code: </p>
+    <button id="start-challenge">Start Challenge</button>
+    <p id="challenge-text">Word: </p>
+    <p id="challenge-morse">Morse: </p>
+    <p id="score">Score: 0</p>
+    <div>
+        <h2>Video Feed</h2>
+        <img src="/video_feed" alt="Video Feed" style="width: 640px; height: 480px;">
+    </div>
+</body>
+</html> 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morse Code Game - Level {{ level }}</title>
+    <link rel="stylesheet" href="/static/css/style.css"> <!-- Link to external CSS -->
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script> <!-- Import Socket.IO -->
+    <script defer src="/static/js/script.js"></script> <!-- Main game script -->
+    <script>
+        console.log("[DEBUG] Loaded index.html for Level {{ level }}."); // Debugging log
+    </script>
+</head>
+<body>
+    <h1>Morse Code Game - Level {{ level }}</h1> <!-- Display current level -->
+    <p id="morse-display">Morse Code: </p> <!-- Real-time Morse code display -->
+    <button id="start-challenge">Start Challenge</button> <!-- Button to start the challenge -->
+    <p id="challenge-text">Word: </p> <!-- Display the challenge word -->
+    <p id="challenge-morse">Morse: </p> <!-- Display the challenge Morse code -->
+    <p id="score">Score: 0</p> <!-- Display the current score -->
+    <div>
+        <h2>Video Feed</h2> <!-- Header for video feed section -->
+        <img src="/video_feed" alt="Video Feed" style="width: 640px; height: 480px;"> <!-- Webcam video stream -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level Complete</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Level Complete!</h1>
+    <p id="score-display">Your total score: 0</p>
+    <button onclick="goHome()">Return to Home</button>
+
+    <script>
+        // Extract score from the query parameter
+        const params = new URLSearchParams(window.location.search);
+        const score = params.get('score') || 0;
+
+        // Display the score
+        document.getElementById('score-display').textContent = `Your total score: ${score}`;
+
+        // Navigate back to home
+        function goHome() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html> 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Level Complete</title>
+    <link rel="stylesheet" href="/static/css/style.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <h1>Level Complete!</h1> <!-- Header for completion message -->
+    <p id="score-display">Your total score: 0</p> <!-- Display the user's score -->
+    <button onclick="goHome()">Return to Home</button> <!-- Button to return to the home page -->
+
+    <script>
+        // Extract the score from the URL query parameters
+        const params = new URLSearchParams(window.location.search);
+        const score = params.get('score') || 0; // Default to 0 if no score is present
+
+        // Update the displayed score
+        document.getElementById('score-display').textContent = `Your total score: ${score}`;
+
+        // Redirect to the home page
+        function goHome() {
+            window.location.href = '/home';
+        }
+    </script>
+</body>
+</html>

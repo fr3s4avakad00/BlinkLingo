@@ -1,0 +1,327 @@
+/* General Page Styling
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9fb;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 3em;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#morse-display {
+    font-size: 1.5em;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f1c40f;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: fit-content;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.8);
+}
+
+button.locked {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+button.locked:hover {
+    background-color: #bdc3c7;
+    transform: none;
+}
+
+.level-button {
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.level-button.completed {
+    background-color: #2ecc71; 
+}
+
+.level-button:hover:not(.locked) {
+    background-color: #2980b9;
+}
+
+img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    display: block;
+    max-width: 90%;
+    height: auto;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #aaa;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .level-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+ */
+
+ /* General Page Styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex; /* Enables flexible layout */
+    flex-direction: column; /* Stacks items top to bottom */
+    align-items: center; /* Centers items horizontally */
+    min-height: 100vh; /* Ensures full-page height */
+}
+
+/* Container Styling */
+.container {
+    width: 100%; /* Full width of the page */
+    max-width: 800px; /* Limits the container width for readability */
+    margin: 20px auto; /* Centers the container with spacing */
+    padding: 20px;
+    background: white; /* White background for content */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Centers text inside the container */
+}
+
+/* Header Styling */
+h1 {
+    font-size: 2.5em;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px 0; /* Adds spacing between buttons */
+    display: block; /* Ensures buttons are stacked vertically */
+    width: 100%; /* Full width for better alignment */
+    max-width: 300px; /* Limits the button width */
+    margin: 10px auto; /* Centers the buttons */
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Morse Display Styling */
+#morse-display {
+    font-size: 1.5em;
+    margin: 20px auto;
+    padding: 15px;
+    background: #f1c40f;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: fit-content;
+}
+
+/* Full-Width Images */
+.full-width-image {
+    width: 100%; /* Ensures the image spans the full width */
+    height: auto; /* Maintains aspect ratio */
+    margin: 20px 0; /* Adds spacing above and below */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 0.9em;
+    color: #aaa;
+    border-top: 1px solid #ddd;
+    width: 100%; /* Stretches across the page */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* General Animation Setup */
+body {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Cool Parallax Scrolling Animation */
+.section {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px) scale(0.9); /* Starts slightly downscaled and shifted */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth opacity and position transition */
+    will-change: opacity, transform; /* Optimizes rendering for smoother animations */
+}
+
+.section.visible {
+    opacity: 1; /* Becomes fully visible */
+    transform: translateY(0) scale(1); /* Returns to original size and position */
+}
+
+/* Full-Width Images with Parallax Effect */
+.full-width-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1); /* Base scale for the image */
+    transition: transform 1.5s ease; /* Smooth scaling transition */
+}
+
+.section.visible .full-width-image {
+    transform: scale(1.05); /* Slight enlargement for the parallax effect */
+}
+
+/* Slide-In Effect from Left or Right */
+.section:nth-child(odd) {
+    transform: translateX(-50px) scale(0.9); /* Slides in from the left */
+}
+
+.section:nth-child(even) {
+    transform: translateX(50px) scale(0.9); /* Slides in from the right */
+}
+
+.section.visible:nth-child(odd) {
+    transform: translateX(0) scale(1); /* Centers odd sections */
+}
+
+.section.visible:nth-child(even) {
+    transform: translateX(0) scale(1); /* Centers even sections */
+}
+
+/* Keyframes for Attention-Grabbing Effect */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    animation: bounceIn 1.5s ease forwards;
+}
+
+
+
+

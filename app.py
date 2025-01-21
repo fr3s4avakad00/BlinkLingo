@@ -6,7 +6,7 @@
 
 # app = Flask(__name__)
 # socketio = SocketIO(app)
-# app.secret_key = 'BA8MUPCs6n5cfuhPGXFfy3QWLlFKwGmW'
+# app.secret_key = 'secretKey'
 
 # # Initialize the BlinkMorseCode detector
 # blink_morse_code = BlinkMorseCode(socketio)
